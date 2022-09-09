@@ -2,16 +2,18 @@ import 'sleeker/reset.css';
 import '../styles/base.css';
 import 'sleeker/variables.css';
 import 'sleeker/utility-classes.css';
-
+import LogoSvg from '../public/sleeker-logo.svg';
 import type { AppProps } from 'next/app'
+import Link from '../component/uikit/Link';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className='d:grid h:100% max-w:page mg-inl:auto' style={{ gridTemplateRows: "auto 1fr auto" }}>
       <header className='pos:sticky top:0 bg:gray12 clr:green9 w:100% mg-inl:auto pd-bl:s d:flex jc:space-between gap ai:center' style={{ top: 0 }}>
-        <a href="/">
-          <img src='/sleeker-logo.svg' alt='sleeker logo' width='100px' />
-        </a>
+        <Link href="/">
+          <LogoSvg className="max-w:--s1 --s1:8rem"/>
+          {/* <img src='/sleeker-logo.svg' alt='sleeker logo' width='100px' /> */}
+        </Link>
         {/* <nav className='d:flex gap '>
               <a href="/docs">Docs</a>
               <a href="https://github.com">GitHub</a>
@@ -33,11 +35,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className='w:100% d:flex gap'>
         <aside className='min-w:--s1 --s1:10rem '>
           <nav className="d:flex column gap:xs pd-bl:s">
-            <a href="/docs/getting-started" className=''>Getting Started</a>
+            <Link href="/docs/getting-started" className=''>Getting Started</Link>
             {/* <span className=''> Classes</span> */}
-            <a href="/docs/classes" className=''>Classes</a>
+            <Link href="/docs/classes" className=''>Classes</Link>
             {/* <span className=' clr:gray10'> Other</span> */}
-            <a href="/docs/reset" className=''>CSS Reset</a>
+            <Link href="/docs/reset" className=''>CSS Reset</Link>
             {/* <a href="/docs/compact-words">Compact words</a> */}
             {/* <a href="/docs/one-part-classes">One-part Classes</a> */}
             {/* <a href="/docs/colors">Colors</a> */}

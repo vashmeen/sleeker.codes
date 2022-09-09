@@ -1,4 +1,4 @@
-export default () => {
+const Page = () => {
 
   return (
     <div className='layout:stack'>
@@ -8,14 +8,15 @@ export default () => {
       <p>To keep classes short and less ugly, sleeker uses some compact words instead CSS standard names.</p>
       <p>Compact versions are used for more frequently CSS words.</p>
       <p>
-        For example, instead of <code>className="background:red"</code> sleeker uses <code>className="bg:red"</code>.
+        For example, instead of <code>{`className="background:red"`}</code> sleeker uses <code>{`className="bg:red"`}</code>.
       </p>
       <p>To make it sleeker consistent, and easier to remember, bg is used wherever background word is used.</p>
-      <p>For example, instead of <code>className="background-repeat:no-repeat"</code>, use <code>className="bg-repeat:no-repeat"</code>
-        There could be multiple compact word in one class. For Example instead of <code>className="background-position:center"</code> use <code>className="bg-pos:center"</code>
+      <p>For example, instead of <code>{`className="background-repeat:no-repeat"`}
+      </code>, use <code>{`className="bg-repeat:no-repeat"`}</code>
+        There could be multiple compact word in one class. For Example instead of <code>{`className="background-position:center"`}</code> use <code>{`className="bg-pos:center"`}</code>
       </p>
       <p>
-        These compact versions are as compact as possible without hurting readability. For example we didnt use cl for color since it could be confused with column or class.
+        These compact versions are as compact as possible without hurting readability. For example we didn&apos;t use cl for color since it could be confused with column or class.
       </p>
 
       <h2>List of all Sleeker compact words</h2>
@@ -39,17 +40,16 @@ export default () => {
           <Trow word='position' compact='pos' example="pos:sticky" />
           <Trow word='absolute' compact='abs' example="pos:abs" />
           <Trow word='relative' compact='rel' example="pos:rel" />
-          <Trow word='display' compact='dsp' example="dsp:bl dsp:flx dsp:grd" />
-          <Trow word='direction' compact='dir' example="dir:rtl flx-dir:row" />
+          <Trow word='display' compact='dsp' example="dsp:bl d:flex dsp:grd" />
+          <Trow word='direction' compact='dir' example="dir:rtl d:flex-dir:row" />
           <Trow word='shadow' compact='shd' example="bg:blue3" />
           <Trow word='text' compact='tx' example="tx-align:start" />
           <Trow word='grid-template-columns' compact='tmpl' example="cols:auto" />
           <Trow word='grid-template-rows' compact='tmpl' example="rows:1fr" />
-          <Trow word='column' compact='col' example="flx-dir:col" />
+          <Trow word='column' compact='col' example="d:flex-dir:col" />
           <Trow word='letter-spacing' compact='ltr-sp' example="ltr-sp:xs" />
           <Trow word='width' compact='w' example="w:auto max-w:page" />
           <Trow word='height' compact='h' example="h:100% min-h:100% line-h:1" />
-
           <Trow word='block' compact='blk' example="dps:blk mg-blk:xs" />
           <Trow word='inline' compact='in' example="mg-in:auto" />
         </tbody>
@@ -57,8 +57,9 @@ export default () => {
     </div>
   )
 }
+export default Page;
 
-const Trow = ({ word, compact, example }) => {
+const Trow = ({ word = "", compact = "", example = "" }) => {
   return (
     <tr >
       <td>{word}</td>

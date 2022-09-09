@@ -1,4 +1,6 @@
-export default () => {
+import Link from '../../component/uikit/Link';
+
+const Page = () => {
 
 
   return (
@@ -11,11 +13,10 @@ export default () => {
       <code className="rd:s bg:gray5 fs pd:s pd-bl:xs">npm i sleeker</code>
       in your root do this:
       <code className="rd:s bg:gray5 fs pd:s pd-bl:xs">
-        import 'sleeker/variables.css';
+        {`import 'sleeker/variables.css';`}
         <br />
-        import 'sleeker/utility-classes.css'
+        {`import 'sleeker/utility-classes.css'`}
       </code>
-
       <h3>with link</h3>
       <h3>with manual source download</h3>
       <h3>for WordPRess</h3>
@@ -43,11 +44,13 @@ export default () => {
       <h3>Change utility classes as needed</h3>
 
       <ul>
-        <li><a href="/docs/getting-started">Getting Started</a></li>
-        <li><a href="/docs/classes">Sleeker Classes</a></li>
-        <li><a href="/docs/variables">CSS Variables</a></li>
-        <li><a href="/docs/variables">CSS Variables</a></li>
+        <li><Link href="/docs/getting-started">Getting Started</Link></li>
+        <li><Link href="/docs/classes">Sleeker Classes</Link></li>
+        <li><Link href="/docs/variables">CSS Variables</Link></li>
+        <li><Link href="/docs/variables">CSS Variables</Link></li>
       </ul>
     </div>
   )
 }
+
+export default Page;

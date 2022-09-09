@@ -1,4 +1,4 @@
-export default (props) => {
+const Page = () => {
 
   return (
     <div className="max-w:page bg:gray2">
@@ -23,3 +23,4 @@ export default (props) => {
     </div>
   )
 };
+export default Page;

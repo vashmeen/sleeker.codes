@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
           <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
           {/* <!--  Essential META Tags --> */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
           <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
           <meta property="og:title" content="sleeker | an scalable css library based on utility classes close to css syntax" />
           <meta property="og:type" content="website" />

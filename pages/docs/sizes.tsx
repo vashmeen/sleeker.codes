@@ -1,4 +1,4 @@
-export default () => {
+const Page = () => {
   return (
     <div className='w:100% layout:stack '>
       <h1>Sizes</h1>
@@ -37,13 +37,15 @@ const Table = ({ cls, property }) => {
       <th>class</th>
       <th>CSS rules</th>
     </thead>
-    {smallSizes.map(sz => <Trow cls={`${cls}:${sz}`} rule={`${property}:var(--${property}--${sz})`} />)}
+    {smallSizes.map((sz, index) => <Trow key={index} cls={`${cls}:${sz}`} rule={`${property}:var(--${property}--${sz})`} />)}
     <Trow cls={`${cls}`} rule={`${property}:var(--${property})`} />
-    {largeSizes.map(sz => <Trow cls={`${cls}:${sz}`} rule={`${property}:var(--${property}--${sz})`} />)}
+    {largeSizes.map((sz, index) => <Trow key={index} cls={`${cls}:${sz}`} rule={`${property}:var(--${property}--${sz})`} />)}
   </table>
 }
 
-const Trow = ({ cls, rule }) => {
+export default Page;
+
+const Trow = ({ cls = "", rule = "" }) => {
   return <tr>
     <td>{cls}</td>
     <td>{rule}</td>

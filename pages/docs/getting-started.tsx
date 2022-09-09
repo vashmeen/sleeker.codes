@@ -1,3 +1,5 @@
+import Link from '../../component/uikit/Link';
+
 const Page = () => {
   return (
     <div className='bl-gap'>
@@ -47,9 +49,9 @@ const Page = () => {
       <p>Also, you can only set padding in block direction with <CodeChip >pd-bl:xl</CodeChip> or <CodeChip >pd-bl-start:xs</CodeChip> </p>
       <p>To be explicit, each css-rule-like class has only one rule and no more. Everything is explicit.</p>
       <p>
-        <a href="/docs/classes">
+        <Link href="/docs/classes">
           Click here, to see a full list of classes
-        </a>
+        </Link>
       </p>
     </div >
   )
