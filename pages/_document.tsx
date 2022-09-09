@@ -14,7 +14,10 @@ export default class MyDocument extends Document {
           <link rel="icon" href="/favicon.png" sizes="any" />
           <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
           {/* <!--  Essential META Tags --> */}
-          <meta property="og:title" content="sleeker | scalable css library based on utility classes like css syntax" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+          <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+          <meta property="og:title" content="sleeker | an scalable css library based on utility classes close to css syntax" />
           <meta property="og:type" content="website" />
           {/* <meta
             property='og:image'
@@ -23,17 +26,17 @@ export default class MyDocument extends Document {
           <meta property="og:url" content="https://sleeker.codes" />
           <meta name="twitter:card" content="summary_large_image" />
           {/* <!--  Non-Essential Meta Tags, But Recommended --> */}
-          <meta property="og:description" content="sleeker | scalable css library based on utility classes close to css syntax" />
+          <meta property="og:description" content="sleeker | an scalable css library based on utility classes close to css syntax" />
           <meta property="og:site_name" content="sleeker" />
-          <meta name="twitter:image:alt" content="sleeker | scalable css library based on utility classes close to css syntax" />
+          <meta name="twitter:image:alt" content="sleeker | an scalable css library based on utility classes close to css syntax" />
           {/* TO SHOW LARGE THUMBNAILS IN GOOGLE RESULTS */}
           <meta
             name="robots"
             content="max-snippet:20, max-image-preview:large"
           />
-          <meta name="description" content="sleeker | scalable css library based on utility classes close to css syntax" />
+          <meta name="description" content="sleeker | an scalable css library based on utility classes close to css syntax" />
         </Head>
-        <body className='h:100%'>
+        <body className='h:100% --prm:red'>
           <Main />
           <NextScript />
         </body>

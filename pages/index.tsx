@@ -11,8 +11,8 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="max-w:page bl-gap">
-        <section className='layout:stack gap clr:grass11 rd:xl w:100%'>
-          <h1 className='fs:xl fw:800'>Utility Classes, But </h1>
+        <section className='layout:stack gap  rd:xl w:100%'>
+          <h1 className='fs:xl fw:800'>An scalable css library based on utility classes close to css syntax</h1>
           <ul>
             <li>Compacter</li>
             <li>More CSS<span style={{ fontStyle: "italic" }}>ish</span></li>
@@ -20,13 +20,13 @@ const Home: NextPage = () => {
             <li>With Fluid sizes and Typography</li>
           </ul>
           <div className='d:flex wrap gap'>
-            <CodeChip code="pd:xl" />
-            <CodeChip code="flx" />
-            <CodeChip code="gap:xs" />
-            <CodeChip code="bg:green2" />
-            <CodeChip code="clr:gray" />
-            <CodeChip code="pd:xl" />
-            <CodeChip code="pd:xl" />
+            <CodeChip theCode="pd:xl" />
+            <CodeChip theCode="flx" />
+            <CodeChip theCode="gap:xs" />
+            <CodeChip theCode="bg:green2" />
+            <CodeChip theCode="clr:gray" />
+            <CodeChip theCode="pd:xl" />
+            <CodeChip theCode="pd:xl" />
           </div>
           <p>readable like css syntax</p>
           <div className='d:flex gap'>
@@ -57,8 +57,8 @@ const Home: NextPage = () => {
             </WhySleekerCard>
             <WhySleekerCard title="Write readable code">
               <span className=''>Intuitive CSS like format.</span>
-              <span className=''>readable and predictable. bd-size-l border's size is large or border is size large 🤔😅</span>
-              <span> bd-size:l  border's size is large. 🤓</span>
+              <span className=''>readable and predictable. bd-size-l border size is large or border is size large 🤔😅</span>
+              <span> bd-size:l  border size is large. 🤓</span>
               <span>in Tailwind .space-x-2.5 means margin-left: 0.625rem 🤔</span>
               <span className=''>Self-descriptive classes for less common stuff</span>
             </WhySleekerCard>
@@ -73,13 +73,13 @@ const Home: NextPage = () => {
               <span className=''>Dra</span>
             </WhySleekerCard>
             <WhySleekerCard title="Don't lose control">
-              <span className=''>Configure anything, in CSS. Don't fight with the setup env</span>
+              <span className=''>Configure anything, in CSS. Do not fight with the setup env</span>
               <span className=''>override design tokens in markup</span>
               <span className=''>Use theme globally or just in an specific scope</span>
               <span className=''>sudo classes media queries not needed by default but included</span>
             </WhySleekerCard>
             <WhySleekerCard title="Learn Faster">
-              <span className=''>Don not memorize 1639 class. Just learn 5 pattern + 10 shorthands</span>
+              <span >Don not memorize 1639 class. Just learn 5 pattern + 10 shorthands</span>
             </WhySleekerCard>
             <WhySleekerCard title="Use in old project along Tailwind">
               <span className=''>Not a single class collides with 1434334 classes in tailwind. not even with dynamic ones</span>
@@ -88,47 +88,48 @@ const Home: NextPage = () => {
             </WhySleekerCard>
           </ul>
         </section>
-        <section className=''>
+        <section >
           <h2>Sleeker vs Tailwind</h2>
           <div>
             <p>code in SleeK </p>
             <p>code in Tailwind </p>
           </div>
-          <p>
+          <ul>
             <li>
-              no need for @layer. it is all well setup.
+              no need for at-layer. it is all well setup.
             </li>
             <li>
-              No @apply bad practiceS.
+              No at-apply bad practiceS.
             </li>
-            <li>Accessible fluid typography. User can zoom up to 400%</li>
+            <li>Accessible fluid typography. User can zoom up to 400</li>
             <li>Mobile first design </li>
             <li>Utilize modern css features like :has where supported</li>
             <li>Semantic size scales</li>
-          </p>
+          </ul>
+
         </section>
       </div >
     </div >
   )
 }
 
-export default Home
+export default Home;
 
 
 
-const WhySleekerCard = (props) => {
+const WhySleekerCard = ({ title = "", children }: any) => {
 
 
   return (
     <li className='pd:s bg:mauve4 rd clr:mauve12'>
       <h3 className='fw:700'>
-        {props.title}
+        {title}
       </h3>
-      {props.children}
+      {children}
     </li>
   )
 }
 
-const CodeChip = ({ code }) => {
-  return <code className='pd:9xs fs pd-inl:l rd:pill bg:sky4 clr:sky11'>{code}</code>
+const CodeChip = ({ theCode = "" }) => {
+  return <code className='pd:9xs fs pd-inl:l rd:pill bg:sky4 clr:sky11'>{theCode}</code>
 }
