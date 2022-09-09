@@ -13,3 +13,9 @@ body {
 code {
   font-family: var(--slk-font-family--code);
 }
+
+code {
+  display: block;
+}
+
+p a { text-decoration: underline;}

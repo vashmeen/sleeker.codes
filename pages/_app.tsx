@@ -31,18 +31,19 @@ function MyApp({ Component, pageProps }: AppProps) {
         </div>
       </header>
       <div className='w:100% d:flex gap'>
-        <aside className='w:auto '>
-          <nav className="layout:stack">
-            <span className='fw:900'>Docs</span>
-            <a href="/docs#getting-started">Getting Started</a>
-            <a href="/docs#basics">Getting Started</a>-
-            <span className='fw:900'> Classes</span>
-            <a href="/docs/compact-words">Compact words</a>
-            <a href="/docs/one-part-classes">One-part Classes</a>
-            <a href="/docs/colors">Colors</a>
-            <a href="/docs/sizes">Sizes</a>
-            <a href="/docs/layout-utility-classes">Layout Patterns</a>
-            <span>Examples</span>
+        <aside className='min-w:--s1 --s1:10rem '>
+          <nav className="d:flex column gap:xs pd-bl:s">
+            <a href="/docs/getting-started" className=''>Getting Started</a>
+            {/* <span className=''> Classes</span> */}
+            <a href="/docs/classes" className=''>Classes</a>
+            {/* <span className=' clr:gray10'> Other</span> */}
+            <a href="/docs/reset" className=''>CSS Reset</a>
+            {/* <a href="/docs/compact-words">Compact words</a> */}
+            {/* <a href="/docs/one-part-classes">One-part Classes</a> */}
+            {/* <a href="/docs/colors">Colors</a> */}
+            {/* <a href="/docs/sizes">Sizes</a> */}
+            {/* <a href="/docs/layout-utility-classes">Layout Patterns</a> */}
+            {/* <span>Examples</span> */}
           </nav>
         </aside >
         <main className='w:100%'>
