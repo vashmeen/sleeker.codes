@@ -1,0 +1,31 @@
+code {
+  color: var(--gray-11);
+  padding: 0.1em;
+  border-radius: var(--border-radius--xs);
+  background-color: var(--gray-3);
+}
+
+button, .button {
+  border: none;
+  padding: var(--slk-padding--2xs) var(--slk-padding);
+  border-radius: var(--slk-border-radius--xs);
+  background-color:  var(--rdx-gray-4) ;
+}
+
+:root {
+  --slk-font-family--heading: Poppins;
+  --slk-font-family--content: Poppins;
+  --slk-font-family--code: "IBM Plex Mono";
+}
+
+body {
+  font-family: var(--slk-font-family--content);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--slk-font-family--heading);
+}
+
+code {
+  font-family: var(--slk-font-family--code);
+}
